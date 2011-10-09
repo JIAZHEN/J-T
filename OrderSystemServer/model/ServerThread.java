@@ -9,7 +9,6 @@ import java.sql.*;
 import java.util.*;
 
 import javax.net.ssl.SSLSocket;
-import org.jasypt.exceptions.EncryptionOperationNotPossibleException;
 import org.jdom.*;
 
 /**
@@ -206,7 +205,7 @@ public class ServerThread extends Thread {
                         result = true;
                     }
                     pStmt.close();
-                } catch (EncryptionOperationNotPossibleException eone) {
+                } catch (Exception exception) {
                 }
             } catch (SQLException e) {
             }
